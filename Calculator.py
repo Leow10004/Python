@@ -171,7 +171,7 @@ def clear():
     entry.delete(0, tk.END)
 
 root = tk.Tk()
-root.overrideredirect(True)  # Remove window manager controls
+root.overrideredirect(True)
 root.geometry('400x350+200+200')
 
 # Title bar
@@ -189,11 +189,11 @@ title_label.pack(side=LEFT, padx=10)
 close_button = Button(title_bar, text='✕', font=('Helvetica', 12), width=4, relief='flat', bg="#2b2b2b", fg="white", borderwidth=0, command=root.destroy)
 close_button.pack(side=RIGHT)
 
-# Entry widget (equation display)
+# Entry widget
 entry = Entry(root, font=('Helvetica', 16), justify='right', bd=4)
 entry.pack(expand=True, fill=tk.X, padx=10, pady=(10, 0))
 
-# Equation widget (equation display)
+# Equation widget
 equation = Entry(root, font=('Helvetica', 12, 'bold'), justify='right', bd=4)
 equation.pack(expand=True, fill=tk.X, padx=10, pady=(0, 10))
 
@@ -201,7 +201,7 @@ equation.pack(expand=True, fill=tk.X, padx=10, pady=(0, 10))
 buttons_frame = Frame(root)
 buttons_frame.pack(expand=True, fill=tk.BOTH)
 
-# Button texts arranged in a typical calculator layout
+# Buttons
 button_texts = [
     ('7', '8', '9', '/', '('),
     ('4', '5', '6', 'x', ')'),
@@ -209,7 +209,7 @@ button_texts = [
     ('.', '0', 'C', '=', '+')
 ]
 
-# Creating buttons
+# Create buttons
 for row in button_texts:
     row_frame = Frame(buttons_frame)
     row_frame.pack(expand=True, fill=tk.X)
